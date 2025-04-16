@@ -2,7 +2,26 @@ GET http://localhost:3000/courses HTTP/1.1
 
 ###
 
+GET http://localhost:3000/courses/1 HTTP/1.1
+content-type: application/json
+
+###
+
 POST http://localhost:3000/courses HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "period": 2,
+    "required": true
+}
+###
+DELETE http://localhost:3000/courses/55 HTTP/1.1
+content-type: application/json
+
+###
+
+PUT http://localhost:3000/courses/1 HTTP/1.1
 content-type: application/json
 
 {
@@ -10,8 +29,5 @@ content-type: application/json
     "period": 2,
     "required": true
 }
-###
-DELETE http://localhost:3000/courses/55 HTTP/1.1
-content-type: application/json
 
 
